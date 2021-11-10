@@ -1,1 +1,1 @@
-{"cpu":{"temp":0.24},"ram":{"totalMemMb":7910.72,"usedMemMb":3617.14,"freeMemMb":4293.58,"usedMemPercentage":45.72,"freeMemPercentage":54.28}}
+{"cpu":{"model":"Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz","usage":0.12},"ram":{"totalMemMb":7910.72,"usedMemMb":2865.23,"freeMemMb":5045.49,"usedMemPercentage":36.22,"freeMemPercentage":63.78},"netstats":{"total":{"inputMb":0,"outputMb":0},"enp4s0":{"inputMb":0,"outputMb":0}}}
