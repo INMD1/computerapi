@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/test', function(req, res) {
-  res.status(200).json(JSON.parse(fs.readFileSync('/home/ubuntu/바탕화면/github/computerapi/public/json/test.json', 'utf8')));
+  res.status(200).json(JSON.parse(fs.readFileSync('/home/ubuntu/바탕화면/github/computerapi/public/json/data.json', 'utf8')));
 });
 
 
