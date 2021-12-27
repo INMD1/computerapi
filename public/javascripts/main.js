@@ -1,6 +1,9 @@
 const osu = require('node-os-utils');
 const fs = require('fs');
-const { snapshot } = require("process-list");
+const path = require('path');
+const {
+    snapshot
+} = require("process-list");
 const cpuStat = require('cpu-stat');
 
 //선언
@@ -12,35 +15,44 @@ const totalCores = cpuStat.totalCores();
 //3초마다  정보를 수정함
 setInterval(async function () {
     const clock = [];
+    const templist = [];
     const process = [];
-    let temp = 0, count = 0;
+    let temp = 0,
+        count = 0;
 
-    const acpu = await cpu.usage()
-    const aram = await mem.info()
+    const acpu = await cpu.usage();
+    const aram = await mem.info();
     const anetstats = await netstat.inOut();
     const tasks = await snapshot('pid', 'name', 'cpu');
 
     for (let index = 0; index < totalCores; index++) {
         const avgClockMHz = cpuStat.avgClockMHz(index);
-        clock.push({ "core": index, "clock": avgClockMHz })
+        clock.push({
+            "core": index,
+            "clock": avgClockMHz
+        });
     }
 
     for (let index = 0; index < Object.keys(tasks).length; index++) {
         if (tasks[index].name != "") {
             if (tasks[index].cpu != 0) {
-                process[count] = tasks[index];
+                templist[count] = tasks[index];
                 count++;
             }
         }
     }
-    for (let i = 0; i < Object.keys(process).length; i++) {
-        for (let j = 0; j < Object.keys(process).length - 1; j++) {
-            if (process[j].cpu < process[j + 1].cpu) {
-                temp = process[j];
-                process[j] = process[j + 1];
-                process[j + 1] = temp;
+    for (let i = 0; i < Object.keys(templist).length; i++) {
+        for (let j = 0; j < Object.keys(templist).length - 1; j++) {
+            if (templist[j].cpu < templist[j + 1].cpu) {
+                temp = templist[j];
+                templist[j] = templist[j + 1];
+                templist[j + 1] = temp;
             }
         }
+    }
+
+    for (let index = 0; index < 5; index++) {
+        process[index] = templist[index];
     }
 
     let json = {
@@ -54,6 +66,5 @@ setInterval(async function () {
         "netstats": anetstats
     }
 
-    fs.writeFileSync('/home/ubuntu/바탕화면/github/computerapi/public/json/data.json', JSON.stringify(json), 'utf8');
-}, 3000);
-
+    fs.writeFileSync(path.normalize('../json/data.json'), JSON.stringify(json), 'utf8');
+}, 2000);

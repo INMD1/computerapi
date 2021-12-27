@@ -1,1 +1,84 @@
-{"cpu":{"model":"Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz","usage":2.12,"clock":[{"core":0,"clock":3262.5},{"core":1,"clock":3262.5},{"core":2,"clock":3262.5},{"core":3,"clock":3262.5},{"core":4,"clock":3262.5},{"core":5,"clock":3262.5},{"core":6,"clock":3262.5},{"core":7,"clock":3262.5}],"proccess":[{"name":"node","pid":228916,"cpu":28.57142857142857},{"name":"node","pid":228910,"cpu":14.285714285714285},{"name":"node","pid":228875,"cpu":9.090909090909092},{"name":"node","pid":40560,"cpu":0.8522704452530705},{"name":"gnome-shell","pid":1374,"cpu":0.486523931500008},{"name":"firefox","pid":191164,"cpu":0.2138879669579968},{"name":"node","pid":4526,"cpu":0.10559406738674836},{"name":"Xorg (deleted)","pid":1039,"cpu":0.07450874571574713},{"name":"tracker-miner-fs","pid":1014,"cpu":0.03302549810103386},{"name":"node","pid":4515,"cpu":0.02498780836769157},{"name":"tracker-store","pid":7474,"cpu":0.009049500769207564},{"name":"gvfsd-metadata","pid":3455,"cpu":0.00805697895517097},{"name":"node","pid":1026,"cpu":0.005235749698944392},{"name":"pulseaudio (deleted)","pid":1012,"cpu":0.004832999722102516},{"name":"gvfs-afc-volume-monitor","pid":1073,"cpu":0.004027499768418763},{"name":"gsd-housekeeping","pid":1501,"cpu":0.0036247935881428975},{"name":"update-notifier (deleted)","pid":3471,"cpu":0.002014260967650969},{"name":"dbus-daemon","pid":1033,"cpu":0.0020137498842093815},{"name":"gvfs-udisks2-volume-monitor","pid":1056,"cpu":0.0008054999536837526},{"name":"gsd-color","pid":1497,"cpu":0.0004027548431269886}]},"ram":{"totalMemMb":7910.72,"usedMemMb":2326.8,"freeMemMb":5583.92,"usedMemPercentage":29.41,"freeMemPercentage":70.59},"netstats":{"total":{"inputMb":0,"outputMb":0},"enp4s0":{"inputMb":0,"outputMb":0}}}
+{
+    "cpu": {
+        "model": "AMD Ryzen 7 2700X Eight-Core Processor         ",
+        "usage": 24.39,
+        "clock": [{
+            "core": 0,
+            "clock": 3700
+        }, {
+            "core": 1,
+            "clock": 3700
+        }, {
+            "core": 2,
+            "clock": 3700
+        }, {
+            "core": 3,
+            "clock": 3700
+        }, {
+            "core": 4,
+            "clock": 3700
+        }, {
+            "core": 5,
+            "clock": 3700
+        }, {
+            "core": 6,
+            "clock": 3700
+        }, {
+            "core": 7,
+            "clock": 3700
+        }, {
+            "core": 8,
+            "clock": 3700
+        }, {
+            "core": 9,
+            "clock": 3700
+        }, {
+            "core": 10,
+            "clock": 3700
+        }, {
+            "core": 11,
+            "clock": 3700
+        }, {
+            "core": 12,
+            "clock": 3700
+        }, {
+            "core": 13,
+            "clock": 3700
+        }, {
+            "core": 14,
+            "clock": 3700
+        }, {
+            "core": 15,
+            "clock": 3700
+        }],
+        "proccess": [{
+            "name": "System Idle Process",
+            "pid": 0,
+            "cpu": 100
+        }, {
+            "name": "node.exe",
+            "pid": 11560,
+            "cpu": 41.4793431451422
+        }, {
+            "name": "dwm.exe",
+            "pid": 1500,
+            "cpu": 21.20722964636614
+        }, {
+            "name": "msedge.exe",
+            "pid": 16732,
+            "cpu": 14.173951705975787
+        }, {
+            "name": "MsMpEng.exe",
+            "pid": 4480,
+            "cpu": 11.347965769797407
+        }]
+    },
+    "ram": {
+        "totalMemMb": 24524.16,
+        "usedMemMb": 7810.14,
+        "freeMemMb": 16714.02,
+        "usedMemPercentage": 31.85,
+        "freeMemPercentage": 68.15
+    },
+    "netstats": "not supported"
+}
