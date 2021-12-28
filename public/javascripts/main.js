@@ -65,6 +65,6 @@ setInterval(async function () {
         "ram": aram,
         "netstats": anetstats
     }
-
-    fs.writeFileSync(path.normalize('../json/data.json'), JSON.stringify(json), 'utf8');
+    const pathfile = path.dirname(__filename).replace("javascripts", "");
+    fs.writeFileSync(path.normalize(`${pathfile}/json/data.json`), JSON.stringify(json), 'utf8');
 }, 2000);
