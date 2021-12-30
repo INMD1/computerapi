@@ -7,121 +7,93 @@
 {
     "cpu": {
         "model": "Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz",
-        "usage": 0.63,
+        "usage": 13.65,
         "clock": [
             {
                 "core": 0,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 1,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 2,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 3,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 4,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 5,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 6,
-                "clock": 3356.25
+                "clock": 3275
             },
             {
                 "core": 7,
-                "clock": 3356.25
+                "clock": 3275
             }
         ],
         "proccess": [
             {
+                "name": "firefox",
+                "pid": 1009371,
+                "cpu": 34.285714285714285
+            },
+            {
+                "name": "gnome-system-monitor",
+                "pid": 1010057,
+                "cpu": 3.2520325203252036
+            },
+            {
                 "name": "node",
                 "pid": 1001491,
-                "cpu": 1.940700808625337
+                "cpu": 1.5774888083564271
             },
             {
                 "name": "node",
                 "pid": 1001449,
-                "cpu": 1.0231556273559503
+                "cpu": 0.979765708200213
             },
             {
                 "name": "gnome-shell",
                 "pid": 1374,
-                "cpu": 0.30930280877600674
-            },
-            {
-                "name": "node",
-                "pid": 1001485,
-                "cpu": 0.18867924528301888
-            },
-            {
-                "name": "node",
-                "pid": 4526,
-                "cpu": 0.11880003124765089
+                "cpu": 0.3179792938240505
             }
         ]
     },
     "ram": {
         "totalMemMb": 7910.72,
-        "usedMemMb": 2029.85,
-        "freeMemMb": 5880.87,
-        "usedMemPercentage": 25.66,
-        "freeMemPercentage": 74.34
+        "usedMemMb": 2659.64,
+        "freeMemMb": 5251.08,
+        "usedMemPercentage": 33.62,
+        "freeMemPercentage": 66.38
     },
-    "ram_porcess": [
-        {
-            "name": "gsd-print-notifications",
-            "pid": 1508,
-            "pmem": "9793536"
-        },
-        {
-            "name": "ibus-engine-hangul",
-            "pid": 2187,
-            "pmem": "9531392"
-        },
-        {
-            "name": "gsd-a11y-settings",
-            "pid": 1496,
-            "pmem": "8613888"
-        },
-        {
-            "name": "ibus-engine-simple",
-            "pid": 1686,
-            "pmem": "8478720"
-        },
-        {
-            "name": "tracker-miner-fs",
-            "pid": 1014,
-            "pmem": "82735104"
-        }
-    ],
     "nettotal": {
-        "inputMb": 0,
-        "outputMb": 0
+        "inputMb": 0.01,
+        "outputMb": 0.09
     },
     "netstatus": [
         {
             "interface": "lo",
-            "inputBytes": "259154819",
-            "outputBytes": "259154819"
+            "inputBytes": "266631471",
+            "outputBytes": "266631471"
         },
         {
             "interface": "enp4s0",
-            "inputBytes": "1760980255",
-            "outputBytes": "1521705660"
+            "inputBytes": "1778699536",
+            "outputBytes": "1535480269"
         }
     ]
-}
-               
+}           
 ```
 ### Cpu
 모델하고 사용량 클럭 정보를 보여줌니다.
