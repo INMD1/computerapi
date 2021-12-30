@@ -17,17 +17,14 @@ setInterval(async function () {
     const clock = [];
     const templist = [];
     const process = [];
-    let temp = 0,temp1 = 0, count = 0;
-    const rma_templist = [];
-    const ram_tasks_result = [];
+    let temp = 0,
+        count = 0;
 
     const acpu = await cpu.usage();
     const aram = await mem.info();
     const nettotal = await netstat.inOut();
     const tasks = await snapshot('pid', 'name', 'cpu');
-    const ram_tasks = await snapshot('pid', 'name', 'pmem');
     const netstatus = await netstat.stats();
-
     for (let index = 0; index < totalCores; index++) {
         const avgClockMHz = cpuStat.avgClockMHz(index);
         clock.push({
@@ -43,14 +40,7 @@ setInterval(async function () {
                 count++;
             }
         }
-        if (ram_tasks[index].name != "") {
-            if (ram_tasks[index].pmem != 0) {
-                rma_templist[count] = ram_tasks[index];
-            }
-        }
     }
-
-
     for (let i = 0; i < Object.keys(templist).length; i++) {
         for (let j = 0; j < Object.keys(templist).length - 1; j++) {
             if (templist[j].cpu < templist[j + 1].cpu) {
@@ -61,21 +51,9 @@ setInterval(async function () {
         }
     }
 
-    for (let i = 0; i < Object.keys(rma_templist).length; i++) {
-        for (let j = 0; j < Object.keys(rma_templist).length - 1; j++) {
-            if (rma_templist[j].pmem < rma_templist[j + 1].pmem) {
-                temp = rma_templist[j];
-                rma_templist[j] = rma_templist[j + 1];
-                rma_templist[j + 1] = temp;
-            }
-        }
-    }
-
     for (let index = 0; index < 5; index++) {
         process[index] = templist[index];
-        ram_tasks_result[index] = rma_templist[index];
     }
-
 
     let json = {
         "cpu": {
@@ -85,11 +63,9 @@ setInterval(async function () {
             "proccess": process
         },
         "ram": aram,
-        "ram_porcess": ram_tasks_result,
         "nettotal": nettotal.total,
         "netstatus": netstatus
     }
-    
     const pathfile = path.dirname(__filename).replace("javascripts", "");
     fs.writeFileSync(path.normalize(`${pathfile}/json/data.json`), JSON.stringify(json), 'utf8');
 }, 2000);
