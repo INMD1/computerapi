@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const {
     snapshot
-} = require("process-list");
+} = require("@senfo/process-list");
 const cpuStat = require('cpu-stat');
 
 //선언
